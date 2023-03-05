@@ -1,4 +1,7 @@
-# Download and start RabbitMQ instance
+# we will be implementing a Spring Boot 3 + RabbitMQ example to genrate more than queue and consume message from it
+
+
+## Download and start RabbitMQ instance
   RabbitMQ is open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The  RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover .
 
   Since RabbitMQ is built on top of Erlang, we will first need to install Erlang. Got to the Erlang downloads page and download the erlang binary file for windows which is an executable.
@@ -15,7 +18,7 @@
   
   Next go to localhost:15672.We will see the RabbitMQ console. The default username and password is guest.
 
-# What are the types of exchanges available in RabbitMQ?
+## What are the types of exchanges available in RabbitMQ?
   There are 4 types of exchanges available in RabbitMQ.
   ### 1- Direct -
     Based on the routing key a message is sent to the binding queue having the same routing key.
@@ -34,17 +37,17 @@
     Default Exchange in RabbitMQ is not a special type of Exchange in RabbitMQ like Direct Exchange or Topic Exchange.
     It is a special Direct Exchange with an empty name
     
-# How to consume messages from RabbitMQ using Spring Boot?
+## How to consume messages from RabbitMQ using Spring Boot?
   ### Manually
     To consume message from a RabbitMQ Queue we need to implement RabbitMQ Rest using Spring Boot 
     and we need to get count of Messages and data of its.
   ### Automatically
     To consume message from a RabbitMQ Queue we need to implement RabbitMQ listeners using Spring Boot .
     
-# How to implement Retry and Error Handling for RabbitMQ?
+## How to implement Retry and Error Handling for RabbitMQ?
   Retry messages on exception and if exception still exists after maximum retries
   then put message in a dead letter queue where it can be analyzed and corrected later.
-# What is a Dead Letter Queue?
+## What is a Dead Letter Queue?
   In message queueing the dead letter queue is a service implementation
   to store messages that meet one or more of the following failure criteria:
     Message that is sent to a queue that does not exist.
